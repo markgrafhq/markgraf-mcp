@@ -1,0 +1,58 @@
+{
+  "manifest_version": "0.3",
+  "name": "markgraf",
+  "display_name": "Markgraf",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Create, validate, and play bounded Markgraf diagrams entirely on the local computer.",
+  "long_description": "Markgraf accepts declarative diagram source from the host chat, validates it against bounded resource limits, and presents checked source in its bundled interactive player. It does not read user files, persist data, call AI models, load images, or make network requests.",
+  "author": {
+    "name": "Markgraf",
+    "url": "https://github.com/markgrafhq"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markgrafhq/markgraf-mcp.git"
+  },
+  "homepage": "https://github.com/markgrafhq/markgraf-mcp",
+  "server": {
+    "type": "node",
+    "entry_point": "server/server.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/server.mjs"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "get_markgraf_guide",
+      "description": "Get a concise, bounded Markgraf DSL quickstart with examples and the authoritative node-shape vocabulary."
+    },
+    {
+      "name": "validate_markgraf",
+      "description": "Parse, apply bounded resource limits to, and validate Markgraf source locally before rendering. Returns an actionable source range when available."
+    },
+    {
+      "name": "render_markgraf",
+      "description": "Validate Markgraf source locally and return it for the bundled inline player. The self-contained player accepts no image assets or external resources."
+    }
+  ],
+  "keywords": [
+    "diagram",
+    "animation",
+    "local",
+    "markgraf"
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22"
+    }
+  }
+}

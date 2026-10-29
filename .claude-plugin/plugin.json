@@ -1,0 +1,11 @@
+{
+  "name": "markgraf",
+  "displayName": "Markgraf",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Create, validate, and play bounded Markgraf diagrams locally.",
+  "author": {
+    "name": "Markgraf",
+    "url": "https://github.com/markgrafhq"
+  }
+}
